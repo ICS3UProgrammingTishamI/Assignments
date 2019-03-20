@@ -1,0 +1,10 @@
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\bin\Debug\PizzaOrderTishamI.exe.config
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\bin\Debug\PizzaOrderTishamI.exe
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\bin\Debug\PizzaOrderTishamI.pdb
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.csprojAssemblyReference.cache
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.frmPizzaOrder.resources
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.Properties.Resources.resources
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.csproj.GenerateResource.cache
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.csproj.CoreCompileInputs.cache
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.exe
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\PizzaOrderTishamI\PizzaOrderTishamI\obj\Debug\PizzaOrderTishamI.pdb

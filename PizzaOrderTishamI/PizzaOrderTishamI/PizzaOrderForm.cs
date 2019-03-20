@@ -16,5 +16,10 @@ namespace PizzaOrderTishamI
         {
             InitializeComponent();
         }
+
+        private void nudToppings_ValueChanged(object sender, EventArgs e)
+        {
+            lblToppings.Text = "The cost of your toppings is " + String.Format("{0:$0.00}" , Convert.ToString(nudToppings.Value));
+        }
     }
 }
