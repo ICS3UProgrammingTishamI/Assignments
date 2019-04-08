@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplified21TishamI", "Simplified21TishamI.csproj", "{7EC9ACF4-1207-4F74-A768-A4E8A05582B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EC9ACF4-1207-4F74-A768-A4E8A05582B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC9ACF4-1207-4F74-A768-A4E8A05582B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC9ACF4-1207-4F74-A768-A4E8A05582B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC9ACF4-1207-4F74-A768-A4E8A05582B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {426EC83A-4F83-440B-A376-A3528065BF74}
+	EndGlobalSection
+EndGlobal

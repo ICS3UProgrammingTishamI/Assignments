@@ -1,0 +1,10 @@
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\bin\Debug\Simplified21TishamI.exe.config
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\bin\Debug\Simplified21TishamI.exe
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\bin\Debug\Simplified21TishamI.pdb
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.csprojAssemblyReference.cache
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.Properties.Resources.resources
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.frmSimplified21.resources
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.csproj.GenerateResource.cache
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.csproj.CoreCompileInputs.cache
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.exe
+C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.pdb
