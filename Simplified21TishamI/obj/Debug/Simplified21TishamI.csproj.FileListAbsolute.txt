@@ -8,3 +8,13 @@ C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simpli
 C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.csproj.CoreCompileInputs.cache
 C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.exe
 C:\Users\drkil\Documents\Assignments-master\Simplified21TishamI\obj\Debug\Simplified21TishamI.pdb
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\bin\Debug\Simplified21TishamI.exe.config
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\bin\Debug\Simplified21TishamI.exe
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\bin\Debug\Simplified21TishamI.pdb
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.csprojAssemblyReference.cache
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.Properties.Resources.resources
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.frmSimplified21.resources
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.csproj.GenerateResource.cache
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.csproj.CoreCompileInputs.cache
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.exe
+N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.pdb

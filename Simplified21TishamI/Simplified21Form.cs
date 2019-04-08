@@ -39,7 +39,6 @@ namespace Simplified21TishamI
         int MIN_BET = 0, MAX_BET = 3;
 
         //variables
-        string playerName = "";
         int playerAmount;
         int playerTotal = 250;
         int playerBet;
@@ -152,7 +151,7 @@ namespace Simplified21TishamI
                 com1Bet = 20 + 10 * numberGenerator.Next(MIN_BET, MAX_BET + 1);
 
                 //Add them to the label
-                lblCom1Cards.Text += Convert.ToString(com1Card1) + ", " + Convert.ToString(com1Card2);
+                lblCom1Cards.Text += Convert.ToString(com1Card1) + " " + Convert.ToString(com1Card2);
 
                 //if there are any COM players, this will let you see their cards
                 btnComCards.Enabled = true;
@@ -172,7 +171,7 @@ namespace Simplified21TishamI
                 com2Bet = 20 + 10 * numberGenerator.Next(MIN_BET, MAX_BET + 1);
 
                 //Add them to COM2's label
-                lblCom2Cards.Text += Convert.ToString(com2Card1) + ", " + Convert.ToString(com2Card2);
+                lblCom2Cards.Text += Convert.ToString(com2Card1) + " " + Convert.ToString(com2Card2);
 
                 //display totals and bets
                 lblCom2Total.Show();
@@ -189,7 +188,7 @@ namespace Simplified21TishamI
                 com3Bet = 20 + 10 * numberGenerator.Next(MIN_BET, MAX_BET + 1);
 
                 //Add them to COM3's label
-                lblCom3Cards.Text += Convert.ToString(com3Card1) + ", " + Convert.ToString(com3Card2);
+                lblCom3Cards.Text += Convert.ToString(com3Card1) + " " + Convert.ToString(com3Card2);
 
                 //display totals and bets
                 lblCom3Total.Show();
@@ -690,7 +689,7 @@ namespace Simplified21TishamI
             //If it has been reset, that means that you have a second hand of cards
             //And that your first hand has been finalized
             //Then, it will generate cards for the second hand
-            if (playerCard1 == 0)
+            if (playerCard1 != 0)
             {
                 #region Card Generation
                 //Generates cards
@@ -738,6 +737,11 @@ namespace Simplified21TishamI
                 {
                     playerCard10 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
                     lblPlayerCards.Text += " " + Convert.ToString(playerCard10);
+
+                    //Disable hitting as you've reached the max amount of cards
+                    btnHit.Enabled = false;
+                    btnDoubleDown.Enabled = false;
+                    
                 }
                 #endregion
             }
@@ -789,6 +793,10 @@ namespace Simplified21TishamI
                 {
                     playerD2C10 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
                     lblPlayerCards2.Text += " " + Convert.ToString(playerD2C10);
+
+                    //disable hitting as you've reached the limit for drawing cards
+                    btnDoubleDown.Enabled = false;
+                    btnHit.Enabled = false;
                 }
                 #endregion
             }
@@ -804,6 +812,7 @@ namespace Simplified21TishamI
             {
                 #region Ace Conversion
                 //this converts any cards that happen to be an ace into a one
+                //It then updates the numbers displayed
                 //I don't know how to optimize this
                 if (playerCard1 == 11)
                 {
@@ -959,10 +968,24 @@ namespace Simplified21TishamI
                 else
                 {
                     lblMessages.Text = "You've busted and lost your bet!";
+                    lblMessages.Show();
+
                     playerTotal -= playerBet;
                     dealerTotal += playerBet;
                     playerBet = 0;
                     lblPlayerTotal.Text = "Your total: " + Convert.ToString(playerTotal);
+
+                    //Disable everything but continuing, as you've lost
+                    btnHit.Enabled = false;
+                    btnDoubleDown.Enabled = false;
+                    btnStand.Enabled = false;
+                    btnSurrender.Enabled = false;
+                    btnInsurance.Enabled = false;
+                    btnSplit.Enabled = false;
+                    
+                    //Show the continue button
+                    btnContinue.Enabled = true;
+                    btnContinue.Show();
                 }
             }
 
@@ -1145,6 +1168,10 @@ namespace Simplified21TishamI
         }
         #endregion
 
+        #region Continue
+
+        #endregion
+
         #region Exit
         private void MniExit_Click(object sender, EventArgs e)
         {
@@ -1168,6 +1195,120 @@ namespace Simplified21TishamI
 
             //menu strips are important to have at all times
             mnuMenuStrip.Show();
+
+            //reset all the variables
+             playerAmount = 0;
+             playerTotal = 250;
+             playerBet = 0;
+             playerBet2 = 0;
+             com1Total = 250;
+             com1Bet = 0;
+             com2Total = 250;
+             com2Bet = 0;
+             com3Total = 250;
+             com3Bet = 0;
+             dealerTotal = 5000;
+             playerCardSum = 0;
+             playerCardSum2 = 0;
+             dealerCardSum = 0;
+             com1CardSum = 0;
+             com2CardSum = 0;
+             com3CardSum = 0;
+            
+            //reset the card values
+            #region Cards
+            //User's cards
+            playerCard1 = 0;
+            playerCard2 = 0;
+            playerCard3 = 0;
+            playerCard4 = 0;
+            playerCard5 = 0;
+            playerCard6 = 0;
+            playerCard7 = 0;
+            playerCard8 = 0;
+            playerCard9 = 0;
+            playerCard10 = 0;
+
+            //User's second hand's cards (for splitting the deck)
+            playerD2C1 = 0;
+            playerD2C2 = 0;
+            playerD2C3 = 0;
+            playerD2C4 = 0;
+            playerD2C5 = 0;
+            playerD2C6 = 0;
+            playerD2C7 = 0;
+            playerD2C8 = 0;
+            playerD2C9 = 0;
+            playerD2C10 = 0;
+
+            //com1's cards
+            com1Card1 = 0;
+            com1Card2 = 0;
+            com1Card3 = 0;
+            com1Card4 = 0;
+            com1Card5 = 0;
+            com1Card6 = 0;
+            com1Card7 = 0;
+            com1Card8 = 0;
+            com1Card9 = 0;
+            com1Card10 = 0;
+
+            //com2's cards
+            com2Card1 = 0;
+            com2Card2 = 0;
+            com2Card3 = 0;
+            com2Card4 = 0;
+            com2Card5 = 0;
+            com2Card6 = 0;
+            com2Card7 = 0;
+            com2Card8 = 0;
+            com2Card9 = 0;
+            com2Card10 = 0;
+
+            //com3's cards
+            com3Card1 = 0;
+            com3Card2 = 0;
+            com3Card3 = 0;
+            com3Card4 = 0;
+            com3Card5 = 0;
+            com3Card6 = 0;
+            com3Card7 = 0;
+            com3Card8 = 0;
+            com3Card9 = 0;
+            com3Card10 = 0;
+
+            //dealer's cards
+            dealerCard1 = 0;
+            dealerCard2 = 0;
+            dealerCard3 = 0;
+            dealerCard4 = 0;
+            dealerCard5 = 0;
+            dealerCard6 = 0;
+            dealerCard7 = 0;
+            dealerCard8 = 0;
+            dealerCard9 = 0; 
+            dealerCard10 = 0;
+            #endregion
+
+            //reset the labels
+            lblPlayerTotal.Text = "Your Total: $250";
+            lblCom1Total.Text = "Com1's Total: $250";
+            lblCom2Total.Text = "Com2's Total: $250";
+            lblCom3Total.Text = "Com3's Total: $250";
+            lblDealerTotal.Text = "Dealer's Total: $5000";
+
+            lblPlayerCards.Text = "Your Cards: ";
+            lblPlayerCards2.Text = "Your 2nd Hand's Cards:" + Environment.NewLine;
+            lblDealerCards.Text = "Dealer's Cards: ";
+            lblCom1Cards.Text = "Com1's Cards: ";
+            lblCom2Cards.Text = "Com2's Cards: ";
+            lblCom3Cards.Text = "Com3's Cards: ";
+
+            lblPlayerBet.Text = "Your Bet: ";
+            lblCom1Bet.Text = "Com1's Bet: ";
+            lblCom2Bet.Text = "Com2's Bet: ";
+            lblCom3Bet.Text = "Com3's Bet: ";
+
         }
         #endregion
     }
