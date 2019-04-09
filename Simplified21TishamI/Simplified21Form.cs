@@ -198,7 +198,17 @@ namespace Simplified21TishamI
 
             #region Displays
             //display your cards and the dealer's cards
-            lblPlayerCards.Text += Convert.ToString(playerCard1) + ", " + Convert.ToString(playerCard2);
+            lblPlayerCards.Text = "Your cards: "
+                        + Convert.ToString(playerCard1) + " "
+                        + Convert.ToString(playerCard2) + " "
+                        + Convert.ToString(playerCard3) + " "
+                        + Convert.ToString(playerCard4) + " "
+                        + Convert.ToString(playerCard5) + " "
+                        + Convert.ToString(playerCard6) + " "
+                        + Convert.ToString(playerCard7) + " "
+                        + Convert.ToString(playerCard8) + " "
+                        + Convert.ToString(playerCard9) + " "
+                        + Convert.ToString(playerCard10);
             lblPlayerCards.Show();
 
             //The dealer's second card is only shown when it is their turn
@@ -227,8 +237,19 @@ namespace Simplified21TishamI
             #endregion
 
             #region Initial Conditions
-            //If the dealer has an ace, you can make an insurance bet
-            if (dealerCard1 == 11)
+
+            //If you have doubles, you can split your hand
+            if (playerCard1 == playerCard2)
+            {
+                btnSplit.Enabled = true;
+            }
+            else
+            {
+                btnSplit.Enabled = false;
+            }
+
+                //If the dealer has an ace, you can make an insurance bet
+                if (dealerCard1 == 11)
             {
                 btnInsurance.Enabled = true;
 
@@ -247,16 +268,6 @@ namespace Simplified21TishamI
             else
             {
                 btnInsurance.Enabled = false;
-            }
-
-            //If you have doubles, you can split your hand
-            if (playerCard1 == playerCard2)
-            {
-                btnSplit.Enabled = true;
-            }
-            else
-            {
-                btnSplit.Enabled = false;
             }
 
             //If you have a blackjack, you automatically win unless the dealer has blackjack too
@@ -335,6 +346,9 @@ namespace Simplified21TishamI
             dealerTotal += playerBet / 2 + playerBet2 / 2;
             playerBet = 0;
             lblPlayerTotal.Text = "Your total: " + Convert.ToString(playerTotal);
+
+            lblMessages.Text = "You surrendered half your bet, press continue to see COM's actions";
+            lblMessages.Show();
         }
         #endregion
 
@@ -345,7 +359,18 @@ namespace Simplified21TishamI
             //Removes your second card to become your second hand
             playerD2C1 = playerCard2;
             playerCard2 = 0;
-            lblPlayerCards2.Text += Convert.ToString(playerD2C1);
+            lblPlayerCards2.Text = "Your cards: "
+                             + Convert.ToString(playerD2C1) + " "
+                             + Convert.ToString(playerD2C2) + " "
+                             + Convert.ToString(playerD2C3) + " "
+                             + Convert.ToString(playerD2C4) + " "
+                             + Convert.ToString(playerD2C5) + " "
+                             + Convert.ToString(playerD2C6) + " "
+                             + Convert.ToString(playerD2C7) + " "
+                             + Convert.ToString(playerD2C8) + " "
+                             + Convert.ToString(playerD2C9) + " "
+                             + Convert.ToString(playerD2C10);
+
             lblPlayerCards2.Show();
             lblMessages.Text = "You've split your deck in half! And you've also doubled your bet!";
             lblMessages.Show();
@@ -359,6 +384,9 @@ namespace Simplified21TishamI
         #region Double Down
         private void BtnDoubleDown_Click(object sender, EventArgs e)
         {
+            //hide the message label for convenience
+            lblMessages.Hide();
+
             //Doubles your bet
             playerBet += playerBet;
 
@@ -595,6 +623,9 @@ namespace Simplified21TishamI
         #region Insurance
         private void BtnInsurance_Click(object sender, EventArgs e)
         {
+            //hide the message label for convenience
+            lblMessages.Hide();
+            
             if (dealerCard2 == 10)
             {
                 //Cases for if you won the bet
@@ -668,23 +699,37 @@ namespace Simplified21TishamI
         #region Stand
         private void BtnStand_Click(object sender, EventArgs e)
         {
-            //disable the buttons as you ended your turn
-            btnSurrender.Enabled = false;
-            btnStand.Enabled = false;
-            btnHit.Enabled = false;
-            btnDoubleDown.Enabled = false;
-            btnSplit.Enabled = false;
-            btnInsurance.Enabled = false;
+            if (playerD2C1 == 0)
+            {
+                //hide the message label for convenience
+                lblMessages.Hide();
 
-            //continue with COM and dealer turns
-            btnContinue.Enabled = true;
-            btnContinue.Show();
+                //disable the buttons as you ended your turn
+                btnSurrender.Enabled = false;
+                btnStand.Enabled = false;
+                btnHit.Enabled = false;
+                btnDoubleDown.Enabled = false;
+                btnSplit.Enabled = false;
+                btnInsurance.Enabled = false;
+
+                //continue with COM and dealer turns
+                btnContinue.Enabled = true;
+                btnContinue.Show();
+            }
+            //this is if the
+            else if (playerCardSum2 == 0)
+            {
+
+            }
         }
-        #endregion
+            #endregion
 
         #region Hit
         private void BtnHit_Click(object sender, EventArgs e)
         {
+            //hide the message label for convenience
+            lblMessages.Hide();
+
             //This checks if your first card has been reset
             //If it has been reset, that means that you have a second hand of cards
             //And that your first hand has been finalized
@@ -696,48 +741,137 @@ namespace Simplified21TishamI
                 if (playerCard2 == 0)
                 {
                     playerCard2 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard2);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard3 == 0)
                 {
                     playerCard3 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard3);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard4 == 0)
                 {
                     playerCard4 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard4);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard5 == 0)
                 {
                     playerCard5 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard5);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard6 == 0)
                 {
                     playerCard6 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard6);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard7 == 0)
                 {
                     playerCard7 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard7);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard8 == 0)
                 {
                     playerCard8 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard8);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else if (playerCard9 == 0)
                 {
                     playerCard9 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard9);
+                    lblPlayerCards.Text = "Your cards: "
+                            + Convert.ToString(playerCard1) + " "
+                            + Convert.ToString(playerCard2) + " "
+                            + Convert.ToString(playerCard3) + " "
+                            + Convert.ToString(playerCard4) + " "
+                            + Convert.ToString(playerCard5) + " "
+                            + Convert.ToString(playerCard6) + " "
+                            + Convert.ToString(playerCard7) + " "
+                            + Convert.ToString(playerCard8) + " "
+                            + Convert.ToString(playerCard9) + " "
+                            + Convert.ToString(playerCard10);
                 }
                 else
                 {
                     playerCard10 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards.Text += " " + Convert.ToString(playerCard10);
-
+                    lblPlayerCards.Text = "Your cards: "
+                        + Convert.ToString(playerCard1) + " "
+                        + Convert.ToString(playerCard2) + " "
+                        + Convert.ToString(playerCard3) + " "
+                        + Convert.ToString(playerCard4) + " "
+                        + Convert.ToString(playerCard5) + " "
+                        + Convert.ToString(playerCard6) + " "
+                        + Convert.ToString(playerCard7) + " "
+                        + Convert.ToString(playerCard8) + " "
+                        + Convert.ToString(playerCard9) + " "
+                        + Convert.ToString(playerCard10);
                     //Disable hitting as you've reached the max amount of cards
                     btnHit.Enabled = false;
                     btnDoubleDown.Enabled = false;
@@ -752,48 +886,137 @@ namespace Simplified21TishamI
                 if (playerD2C2 == 0)
                 {
                     playerD2C2 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C2);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C3 == 0)
                 {
                     playerD2C3 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C3);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C4 == 0)
                 {
                     playerD2C4 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C4);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C5 == 0)
                 {
                     playerD2C5 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C5);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C6 == 0)
                 {
                     playerD2C6 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C6);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C7 == 0)
                 {
                     playerD2C7 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C7);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C8 == 0)
                 {
                     playerD2C8 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C8);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                    + Convert.ToString(playerD2C1) + " "
+                                                    + Convert.ToString(playerD2C2) + " "
+                                                    + Convert.ToString(playerD2C3) + " "
+                                                    + Convert.ToString(playerD2C4) + " "
+                                                    + Convert.ToString(playerD2C5) + " "
+                                                    + Convert.ToString(playerD2C6) + " "
+                                                    + Convert.ToString(playerD2C7) + " "
+                                                    + Convert.ToString(playerD2C8) + " "
+                                                    + Convert.ToString(playerD2C9) + " "
+                                                    + Convert.ToString(playerD2C10);
                 }
                 else if (playerD2C9 == 0)
                 {
                     playerD2C9 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C9);
+                    lblPlayerCards2.Text = "Your cards: "
+                                                + Convert.ToString(playerD2C1) + " "
+                                                + Convert.ToString(playerD2C2) + " "
+                                                + Convert.ToString(playerD2C3) + " "
+                                                + Convert.ToString(playerD2C4) + " "
+                                                + Convert.ToString(playerD2C5) + " "
+                                                + Convert.ToString(playerD2C6) + " "
+                                                + Convert.ToString(playerD2C7) + " "
+                                                + Convert.ToString(playerD2C8) + " "
+                                                + Convert.ToString(playerD2C9) + " "
+                                                + Convert.ToString(playerD2C10);
                 }
                 else
                 {
                     playerD2C10 = numberGenerator.Next(MIN_CARD, MAX_CARD + 1);
-                    lblPlayerCards2.Text += " " + Convert.ToString(playerD2C10);
-
+                    lblPlayerCards2.Text = "Your cards: "
+                                                + Convert.ToString(playerD2C1) + " "
+                                                + Convert.ToString(playerD2C2) + " "
+                                                + Convert.ToString(playerD2C3) + " "
+                                                + Convert.ToString(playerD2C4) + " "
+                                                + Convert.ToString(playerD2C5) + " "
+                                                + Convert.ToString(playerD2C6) + " "
+                                                + Convert.ToString(playerD2C7) + " "
+                                                + Convert.ToString(playerD2C8) + " "
+                                                + Convert.ToString(playerD2C9) + " "
+                                                + Convert.ToString(playerD2C10);
                     //disable hitting as you've reached the limit for drawing cards
                     btnDoubleDown.Enabled = false;
                     btnHit.Enabled = false;
@@ -975,17 +1198,25 @@ namespace Simplified21TishamI
                     playerBet = 0;
                     lblPlayerTotal.Text = "Your total: " + Convert.ToString(playerTotal);
 
-                    //Disable everything but continuing, as you've lost
-                    btnHit.Enabled = false;
-                    btnDoubleDown.Enabled = false;
-                    btnStand.Enabled = false;
-                    btnSurrender.Enabled = false;
-                    btnInsurance.Enabled = false;
-                    btnSplit.Enabled = false;
-                    
-                    //Show the continue button
-                    btnContinue.Enabled = true;
-                    btnContinue.Show();
+                    //checks if you've split your cards 
+                    if (playerD2C1 == 0)
+                    {
+                        //Disable everything but continuing, as you've lost
+                        btnHit.Enabled = false;
+                        btnDoubleDown.Enabled = false;
+                        btnStand.Enabled = false;
+                        btnSurrender.Enabled = false;
+                        btnInsurance.Enabled = false;
+                        btnSplit.Enabled = false;
+
+                        //Show the continue button
+                        btnContinue.Enabled = true;
+                        btnContinue.Show();
+                    }
+                    else
+                    {
+                        lblMessages.Text += Environment.NewLine + "Good thing you have a second hand";
+                    }
                 }
             }
 
@@ -1022,7 +1253,7 @@ namespace Simplified21TishamI
                     else if (playerD2C2 == 11)
                     {
                         playerD2C2 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1037,7 +1268,7 @@ namespace Simplified21TishamI
                     if (playerD2C3 == 11)
                     {
                         playerD2C3 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1052,7 +1283,7 @@ namespace Simplified21TishamI
                     else if (playerD2C4 == 11)
                     {
                         playerD2C4 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1067,7 +1298,7 @@ namespace Simplified21TishamI
                     else if (playerD2C5 == 11)
                     {
                         playerD2C5 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1082,7 +1313,7 @@ namespace Simplified21TishamI
                     else if (playerD2C6 == 11)
                     {
                         playerD2C6 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1097,7 +1328,7 @@ namespace Simplified21TishamI
                     else if (playerD2C7 == 11)
                     {
                         playerD2C7 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1112,7 +1343,7 @@ namespace Simplified21TishamI
                     else if (playerD2C8 == 11)
                     {
                         playerD2C8 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1127,7 +1358,7 @@ namespace Simplified21TishamI
                     else if (playerD2C9 == 11)
                     {
                         playerD2C9 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1142,7 +1373,7 @@ namespace Simplified21TishamI
                     else if (playerD2C10 == 11)
                     {
                         playerD2C10 = 1;
-                        lblPlayerCards.Text = "Your cards: "
+                        lblPlayerCards2.Text = "Your cards: "
                             + Convert.ToString(playerD2C1) + " "
                             + Convert.ToString(playerD2C2) + " "
                             + Convert.ToString(playerD2C3) + " "
@@ -1162,6 +1393,18 @@ namespace Simplified21TishamI
                         dealerTotal += playerBet2;
                         playerBet2 = 0;
                         lblPlayerTotal.Text = "Your total: " + Convert.ToString(playerTotal);
+
+                        //Disable everything but continuing, as you've lost
+                        btnHit.Enabled = false;
+                        btnDoubleDown.Enabled = false;
+                        btnStand.Enabled = false;
+                        btnSurrender.Enabled = false;
+                        btnInsurance.Enabled = false;
+                        btnSplit.Enabled = false;
+
+                        //Show the continue button
+                        btnContinue.Enabled = true;
+                        btnContinue.Show();
                     }
                 }
             }
@@ -1169,6 +1412,79 @@ namespace Simplified21TishamI
         #endregion
 
         #region Continue
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            //Test case for if you don't take the insurance bet
+            if (btnInsurance.Enabled == true)
+            {
+                btnInsurance.Enabled = false;
+
+                //if the dealer has a blackjack then
+                if (dealerCard2 == 10)
+                {
+                    //Display to the player that they lost
+                    lblMessages.Text = "Wow, the dealer had blackjack! You lost your bet this time!";
+                    lblMessages.Show();
+
+                    playerTotal -= playerBet;
+                    dealerTotal += playerBet;
+                    playerBet = 0;
+
+                    lblPlayerTotal.Text = "Your Total: " + Convert.ToString(playerTotal);
+                }
+                else
+                {
+                    if (playerAmount >= 1)
+                    {
+                        com1Total -= com1Bet;
+                        dealerTotal += com1Bet;
+                        lblCom1Total.Text = "COM1's Total: " + Convert.ToString(com1Total);
+                    }
+                    if (playerAmount >= 2)
+                    {
+                        com2Total -= com2Bet;
+                        dealerTotal += com2Bet;
+                        lblCom2Total.Text = "COM2's Total: " + Convert.ToString(com2Total);
+                    }
+                    if (playerAmount >= 3)
+                    {
+                        com3Total -= com3Bet;
+                        dealerTotal += com1Bet + com2Bet + com3Bet;
+                        lblCom3Total.Text = "COM3's Total: " + Convert.ToString(com3Total);
+                    }
+
+                    lblDealerTotal.Text = "Dealer's Total " + Convert.ToString(dealerTotal);
+                    lblMessages.Text = "No blackjack! Any COM players lost their insurance bet, but you didn't!";
+                    lblMessages.Show();
+
+                    //enable buttons again
+
+                    btnStand.Enabled = true;
+                    btnHit.Enabled = true;
+                    btnDoubleDown.Enabled = true;
+                    btnSurrender.Enabled = true;
+
+                    //If you have doubles, you can split your hand
+                    if (playerCard1 == playerCard2)
+                    {
+                        btnSplit.Enabled = true;
+                    }
+                    else
+                    {
+                        btnSplit.Enabled = false;
+                    }
+                }
+            }
+
+            //When your turn has ended
+            if (btnStand.Enabled == false)
+            {
+
+            }
+
+
+        }
 
         #endregion
 
