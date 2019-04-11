@@ -18,5 +18,3 @@ N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21Tis
 N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.csproj.CoreCompileInputs.cache
 N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.exe
 N:\a\Sem2-Winter2019\ICS3U Programming\Islam, Tisham\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.pdb
-C:\Users\drkil\Documents\GitHub\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.exe
-C:\Users\drkil\Documents\GitHub\Assignments\Simplified21TishamI\obj\Debug\Simplified21TishamI.pdb

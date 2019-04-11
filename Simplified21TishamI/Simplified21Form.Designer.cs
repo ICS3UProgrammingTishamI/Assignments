@@ -68,6 +68,9 @@
             this.lblCom2Bet = new System.Windows.Forms.Label();
             this.lblCom3Bet = new System.Windows.Forms.Label();
             this.lblPlayerBet = new System.Windows.Forms.Label();
+            this.btnReplay = new System.Windows.Forms.Button();
+            this.lblPlayerBet2 = new System.Windows.Forms.Label();
+            this.btnDealerTurn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlayerAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBetAmount)).BeginInit();
             this.mnuMenuStrip.SuspendLayout();
@@ -76,10 +79,9 @@
             // lblPlayerTotal
             // 
             this.lblPlayerTotal.AutoSize = true;
-            this.lblPlayerTotal.Location = new System.Drawing.Point(9, 64);
-            this.lblPlayerTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayerTotal.Location = new System.Drawing.Point(12, 79);
             this.lblPlayerTotal.Name = "lblPlayerTotal";
-            this.lblPlayerTotal.Size = new System.Drawing.Size(86, 13);
+            this.lblPlayerTotal.Size = new System.Drawing.Size(114, 17);
             this.lblPlayerTotal.TabIndex = 0;
             this.lblPlayerTotal.Text = "Your Total: 250$";
             this.lblPlayerTotal.Visible = false;
@@ -87,10 +89,9 @@
             // lblCom1Total
             // 
             this.lblCom1Total.AutoSize = true;
-            this.lblCom1Total.Location = new System.Drawing.Point(9, 85);
-            this.lblCom1Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom1Total.Location = new System.Drawing.Point(12, 105);
             this.lblCom1Total.Name = "lblCom1Total";
-            this.lblCom1Total.Size = new System.Drawing.Size(91, 13);
+            this.lblCom1Total.Size = new System.Drawing.Size(120, 17);
             this.lblCom1Total.TabIndex = 1;
             this.lblCom1Total.Text = "Com1 Total: 250$";
             this.lblCom1Total.Visible = false;
@@ -98,10 +99,9 @@
             // lblDealerTotal
             // 
             this.lblDealerTotal.AutoSize = true;
-            this.lblDealerTotal.Location = new System.Drawing.Point(9, 141);
-            this.lblDealerTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDealerTotal.Location = new System.Drawing.Point(12, 174);
             this.lblDealerTotal.Name = "lblDealerTotal";
-            this.lblDealerTotal.Size = new System.Drawing.Size(108, 13);
+            this.lblDealerTotal.Size = new System.Drawing.Size(144, 17);
             this.lblDealerTotal.TabIndex = 2;
             this.lblDealerTotal.Text = "Dealer\'s Total: 5000$";
             this.lblDealerTotal.Visible = false;
@@ -109,10 +109,9 @@
             // lblCom3Total
             // 
             this.lblCom3Total.AutoSize = true;
-            this.lblCom3Total.Location = new System.Drawing.Point(9, 113);
-            this.lblCom3Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom3Total.Location = new System.Drawing.Point(12, 139);
             this.lblCom3Total.Name = "lblCom3Total";
-            this.lblCom3Total.Size = new System.Drawing.Size(91, 13);
+            this.lblCom3Total.Size = new System.Drawing.Size(120, 17);
             this.lblCom3Total.TabIndex = 4;
             this.lblCom3Total.Text = "Com3 Total: 250$";
             this.lblCom3Total.Visible = false;
@@ -120,10 +119,9 @@
             // lblCom2Total
             // 
             this.lblCom2Total.AutoSize = true;
-            this.lblCom2Total.Location = new System.Drawing.Point(9, 99);
-            this.lblCom2Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom2Total.Location = new System.Drawing.Point(12, 122);
             this.lblCom2Total.Name = "lblCom2Total";
-            this.lblCom2Total.Size = new System.Drawing.Size(91, 13);
+            this.lblCom2Total.Size = new System.Drawing.Size(120, 17);
             this.lblCom2Total.TabIndex = 5;
             this.lblCom2Total.Text = "Com2 Total: 250$";
             this.lblCom2Total.Visible = false;
@@ -132,10 +130,9 @@
             // 
             this.lblPlayerAmount.AutoSize = true;
             this.lblPlayerAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerAmount.Location = new System.Drawing.Point(202, 130);
-            this.lblPlayerAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayerAmount.Location = new System.Drawing.Point(269, 160);
             this.lblPlayerAmount.Name = "lblPlayerAmount";
-            this.lblPlayerAmount.Size = new System.Drawing.Size(503, 26);
+            this.lblPlayerAmount.Size = new System.Drawing.Size(654, 32);
             this.lblPlayerAmount.TabIndex = 10;
             this.lblPlayerAmount.Text = "Please enter the amount of other players you want:";
             this.lblPlayerAmount.Visible = false;
@@ -143,25 +140,25 @@
             // nudPlayerAmount
             // 
             this.nudPlayerAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPlayerAmount.Location = new System.Drawing.Point(207, 159);
-            this.nudPlayerAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.nudPlayerAmount.Location = new System.Drawing.Point(276, 196);
+            this.nudPlayerAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudPlayerAmount.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
             this.nudPlayerAmount.Name = "nudPlayerAmount";
-            this.nudPlayerAmount.Size = new System.Drawing.Size(90, 32);
+            this.nudPlayerAmount.Size = new System.Drawing.Size(120, 38);
             this.nudPlayerAmount.TabIndex = 11;
             this.nudPlayerAmount.Visible = false;
             // 
             // btnPlayerAmount
             // 
             this.btnPlayerAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlayerAmount.Location = new System.Drawing.Point(363, 159);
-            this.btnPlayerAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlayerAmount.Location = new System.Drawing.Point(484, 196);
+            this.btnPlayerAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlayerAmount.Name = "btnPlayerAmount";
-            this.btnPlayerAmount.Size = new System.Drawing.Size(201, 43);
+            this.btnPlayerAmount.Size = new System.Drawing.Size(268, 53);
             this.btnPlayerAmount.TabIndex = 12;
             this.btnPlayerAmount.Text = "Confirm";
             this.btnPlayerAmount.UseVisualStyleBackColor = true;
@@ -171,10 +168,10 @@
             // btnBetAmount
             // 
             this.btnBetAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBetAmount.Location = new System.Drawing.Point(366, 167);
-            this.btnBetAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBetAmount.Location = new System.Drawing.Point(488, 206);
+            this.btnBetAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBetAmount.Name = "btnBetAmount";
-            this.btnBetAmount.Size = new System.Drawing.Size(201, 43);
+            this.btnBetAmount.Size = new System.Drawing.Size(268, 53);
             this.btnBetAmount.TabIndex = 15;
             this.btnBetAmount.Text = "Confirm";
             this.btnBetAmount.UseVisualStyleBackColor = true;
@@ -189,8 +186,8 @@
             0,
             0,
             0});
-            this.nudBetAmount.Location = new System.Drawing.Point(196, 175);
-            this.nudBetAmount.Margin = new System.Windows.Forms.Padding(2);
+            this.nudBetAmount.Location = new System.Drawing.Point(261, 215);
+            this.nudBetAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudBetAmount.Maximum = new decimal(new int[] {
             250,
             0,
@@ -202,7 +199,7 @@
             0,
             0});
             this.nudBetAmount.Name = "nudBetAmount";
-            this.nudBetAmount.Size = new System.Drawing.Size(90, 32);
+            this.nudBetAmount.Size = new System.Drawing.Size(120, 38);
             this.nudBetAmount.TabIndex = 14;
             this.nudBetAmount.Value = new decimal(new int[] {
             20,
@@ -215,13 +212,12 @@
             // 
             this.lblBetAmount.AutoSize = true;
             this.lblBetAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBetAmount.Location = new System.Drawing.Point(192, 87);
-            this.lblBetAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBetAmount.Location = new System.Drawing.Point(255, 79);
             this.lblBetAmount.Name = "lblBetAmount";
-            this.lblBetAmount.Size = new System.Drawing.Size(433, 78);
+            this.lblBetAmount.Size = new System.Drawing.Size(560, 128);
             this.lblBetAmount.TabIndex = 13;
-            this.lblBetAmount.Text = "Please enter the amount you\'ll bet\r\n(Min 20$, Max 250$, increments up by ten)\r\n(Y" +
-    "ou start out with 250$, like COM players):";
+            this.lblBetAmount.Text = "Please enter the amount you\'ll bet\r\n(Min 20$, Max is as much as you can give, \r\ni" +
+    "ncrements up by ten)\r\n(You start out with 250$, like COM players):";
             this.lblBetAmount.Visible = false;
             // 
             // mnuMenuStrip
@@ -231,8 +227,8 @@
             this.mniFile});
             this.mnuMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuMenuStrip.Name = "mnuMenuStrip";
-            this.mnuMenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.mnuMenuStrip.Size = new System.Drawing.Size(952, 24);
+            this.mnuMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.mnuMenuStrip.Size = new System.Drawing.Size(1269, 28);
             this.mnuMenuStrip.TabIndex = 16;
             this.mnuMenuStrip.Text = "menuStrip1";
             // 
@@ -242,52 +238,49 @@
             this.mniExit,
             this.mniNewGame});
             this.mniFile.Name = "mniFile";
-            this.mniFile.Size = new System.Drawing.Size(37, 20);
+            this.mniFile.Size = new System.Drawing.Size(44, 24);
             this.mniFile.Text = "File";
             // 
             // mniExit
             // 
             this.mniExit.Name = "mniExit";
-            this.mniExit.Size = new System.Drawing.Size(132, 22);
+            this.mniExit.Size = new System.Drawing.Size(157, 26);
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.MniExit_Click);
             // 
             // mniNewGame
             // 
             this.mniNewGame.Name = "mniNewGame";
-            this.mniNewGame.Size = new System.Drawing.Size(132, 22);
+            this.mniNewGame.Size = new System.Drawing.Size(157, 26);
             this.mniNewGame.Text = "New Game";
             this.mniNewGame.Click += new System.EventHandler(this.mniNewGame_Click);
             // 
             // lblCom2Cards
             // 
             this.lblCom2Cards.AutoSize = true;
-            this.lblCom2Cards.Location = new System.Drawing.Point(730, 226);
-            this.lblCom2Cards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom2Cards.Location = new System.Drawing.Point(973, 278);
             this.lblCom2Cards.Name = "lblCom2Cards";
-            this.lblCom2Cards.Size = new System.Drawing.Size(77, 13);
+            this.lblCom2Cards.Size = new System.Drawing.Size(106, 17);
             this.lblCom2Cards.TabIndex = 21;
-            this.lblCom2Cards.Text = "Com2\'s Cards: ";
+            this.lblCom2Cards.Text = "COM2\'s Cards: ";
             this.lblCom2Cards.Visible = false;
             // 
             // lblCom3Cards
             // 
             this.lblCom3Cards.AutoSize = true;
-            this.lblCom3Cards.Location = new System.Drawing.Point(730, 259);
-            this.lblCom3Cards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom3Cards.Location = new System.Drawing.Point(973, 319);
             this.lblCom3Cards.Name = "lblCom3Cards";
-            this.lblCom3Cards.Size = new System.Drawing.Size(77, 13);
+            this.lblCom3Cards.Size = new System.Drawing.Size(106, 17);
             this.lblCom3Cards.TabIndex = 20;
-            this.lblCom3Cards.Text = "Com3\'s Cards: ";
+            this.lblCom3Cards.Text = "COM3\'s Cards: ";
             this.lblCom3Cards.Visible = false;
             // 
             // lblDealerCards
             // 
             this.lblDealerCards.AutoSize = true;
-            this.lblDealerCards.Location = new System.Drawing.Point(730, 128);
-            this.lblDealerCards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDealerCards.Location = new System.Drawing.Point(973, 158);
             this.lblDealerCards.Name = "lblDealerCards";
-            this.lblDealerCards.Size = new System.Drawing.Size(81, 13);
+            this.lblDealerCards.Size = new System.Drawing.Size(109, 17);
             this.lblDealerCards.TabIndex = 19;
             this.lblDealerCards.Text = "Dealer\'s Cards: ";
             this.lblDealerCards.Visible = false;
@@ -295,31 +288,29 @@
             // lblCom1Cards
             // 
             this.lblCom1Cards.AutoSize = true;
-            this.lblCom1Cards.Location = new System.Drawing.Point(730, 196);
-            this.lblCom1Cards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom1Cards.Location = new System.Drawing.Point(973, 241);
             this.lblCom1Cards.Name = "lblCom1Cards";
-            this.lblCom1Cards.Size = new System.Drawing.Size(77, 13);
+            this.lblCom1Cards.Size = new System.Drawing.Size(106, 17);
             this.lblCom1Cards.TabIndex = 18;
-            this.lblCom1Cards.Text = "Com1\'s Cards: ";
+            this.lblCom1Cards.Text = "COM1\'s Cards: ";
             this.lblCom1Cards.Visible = false;
             // 
             // lblPlayerCards
             // 
             this.lblPlayerCards.AutoSize = true;
-            this.lblPlayerCards.Location = new System.Drawing.Point(730, 53);
-            this.lblPlayerCards.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayerCards.Location = new System.Drawing.Point(973, 65);
             this.lblPlayerCards.Name = "lblPlayerCards";
-            this.lblPlayerCards.Size = new System.Drawing.Size(65, 13);
+            this.lblPlayerCards.Size = new System.Drawing.Size(87, 17);
             this.lblPlayerCards.TabIndex = 17;
             this.lblPlayerCards.Text = "Your Cards: ";
             this.lblPlayerCards.Visible = false;
             // 
             // btnComCards
             // 
-            this.btnComCards.Location = new System.Drawing.Point(733, 154);
-            this.btnComCards.Margin = new System.Windows.Forms.Padding(2);
+            this.btnComCards.Location = new System.Drawing.Point(977, 190);
+            this.btnComCards.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComCards.Name = "btnComCards";
-            this.btnComCards.Size = new System.Drawing.Size(140, 36);
+            this.btnComCards.Size = new System.Drawing.Size(187, 44);
             this.btnComCards.TabIndex = 22;
             this.btnComCards.Text = "Display COM cards";
             this.btnComCards.UseVisualStyleBackColor = true;
@@ -329,10 +320,10 @@
             // btnHit
             // 
             this.btnHit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHit.Location = new System.Drawing.Point(21, 431);
-            this.btnHit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHit.Location = new System.Drawing.Point(28, 530);
+            this.btnHit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHit.Name = "btnHit";
-            this.btnHit.Size = new System.Drawing.Size(212, 43);
+            this.btnHit.Size = new System.Drawing.Size(283, 53);
             this.btnHit.TabIndex = 23;
             this.btnHit.Text = "Hit";
             this.btnHit.UseVisualStyleBackColor = true;
@@ -342,10 +333,10 @@
             // btnDoubleDown
             // 
             this.btnDoubleDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoubleDown.Location = new System.Drawing.Point(21, 512);
-            this.btnDoubleDown.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDoubleDown.Location = new System.Drawing.Point(28, 630);
+            this.btnDoubleDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDoubleDown.Name = "btnDoubleDown";
-            this.btnDoubleDown.Size = new System.Drawing.Size(212, 43);
+            this.btnDoubleDown.Size = new System.Drawing.Size(283, 53);
             this.btnDoubleDown.TabIndex = 26;
             this.btnDoubleDown.Text = "Double Down";
             this.btnDoubleDown.UseVisualStyleBackColor = true;
@@ -355,10 +346,10 @@
             // btnStand
             // 
             this.btnStand.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStand.Location = new System.Drawing.Point(302, 431);
-            this.btnStand.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStand.Location = new System.Drawing.Point(403, 530);
+            this.btnStand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStand.Name = "btnStand";
-            this.btnStand.Size = new System.Drawing.Size(212, 43);
+            this.btnStand.Size = new System.Drawing.Size(283, 53);
             this.btnStand.TabIndex = 27;
             this.btnStand.Text = "Stand";
             this.btnStand.UseVisualStyleBackColor = true;
@@ -368,10 +359,10 @@
             // btnSplit
             // 
             this.btnSplit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSplit.Location = new System.Drawing.Point(302, 512);
-            this.btnSplit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSplit.Location = new System.Drawing.Point(403, 630);
+            this.btnSplit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSplit.Name = "btnSplit";
-            this.btnSplit.Size = new System.Drawing.Size(212, 43);
+            this.btnSplit.Size = new System.Drawing.Size(283, 53);
             this.btnSplit.TabIndex = 28;
             this.btnSplit.Text = "Split";
             this.btnSplit.UseVisualStyleBackColor = true;
@@ -381,10 +372,10 @@
             // btnInsurance
             // 
             this.btnInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsurance.Location = new System.Drawing.Point(570, 431);
-            this.btnInsurance.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsurance.Location = new System.Drawing.Point(760, 530);
+            this.btnInsurance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsurance.Name = "btnInsurance";
-            this.btnInsurance.Size = new System.Drawing.Size(212, 43);
+            this.btnInsurance.Size = new System.Drawing.Size(283, 53);
             this.btnInsurance.TabIndex = 29;
             this.btnInsurance.Text = "Insurance";
             this.btnInsurance.UseVisualStyleBackColor = true;
@@ -394,10 +385,10 @@
             // btnSurrender
             // 
             this.btnSurrender.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSurrender.Location = new System.Drawing.Point(570, 512);
-            this.btnSurrender.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSurrender.Location = new System.Drawing.Point(760, 630);
+            this.btnSurrender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSurrender.Name = "btnSurrender";
-            this.btnSurrender.Size = new System.Drawing.Size(212, 43);
+            this.btnSurrender.Size = new System.Drawing.Size(283, 53);
             this.btnSurrender.TabIndex = 30;
             this.btnSurrender.Text = "Surrender";
             this.btnSurrender.UseVisualStyleBackColor = true;
@@ -407,10 +398,9 @@
             // lblInsurance
             // 
             this.lblInsurance.AutoSize = true;
-            this.lblInsurance.Location = new System.Drawing.Point(546, 377);
-            this.lblInsurance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInsurance.Location = new System.Drawing.Point(728, 464);
             this.lblInsurance.Name = "lblInsurance";
-            this.lblInsurance.Size = new System.Drawing.Size(244, 52);
+            this.lblInsurance.Size = new System.Drawing.Size(324, 68);
             this.lblInsurance.TabIndex = 31;
             this.lblInsurance.Text = "If the dealer has an ace, you can bet an additional\r\nhalf of what you already bet" +
     " so that if the dealer \r\nhas a blackjack, you\'ll lose no money. \r\nYou can only d" +
@@ -419,30 +409,27 @@
             // lblHit
             // 
             this.lblHit.AutoSize = true;
-            this.lblHit.Location = new System.Drawing.Point(9, 405);
-            this.lblHit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHit.Location = new System.Drawing.Point(12, 498);
             this.lblHit.Name = "lblHit";
-            this.lblHit.Size = new System.Drawing.Size(257, 13);
+            this.lblHit.Size = new System.Drawing.Size(343, 17);
             this.lblHit.TabIndex = 32;
             this.lblHit.Text = "Draw a card. Don\'t go over 21, or you\'ll lose your bet!";
             // 
             // lblStand
             // 
             this.lblStand.AutoSize = true;
-            this.lblStand.Location = new System.Drawing.Point(370, 405);
-            this.lblStand.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStand.Location = new System.Drawing.Point(493, 498);
             this.lblStand.Name = "lblStand";
-            this.lblStand.Size = new System.Drawing.Size(73, 13);
+            this.lblStand.Size = new System.Drawing.Size(98, 17);
             this.lblStand.TabIndex = 33;
             this.lblStand.Text = "End your turn.";
             // 
             // lblSplit
             // 
             this.lblSplit.AutoSize = true;
-            this.lblSplit.Location = new System.Drawing.Point(284, 482);
-            this.lblSplit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSplit.Location = new System.Drawing.Point(379, 593);
             this.lblSplit.Name = "lblSplit";
-            this.lblSplit.Size = new System.Drawing.Size(256, 26);
+            this.lblSplit.Size = new System.Drawing.Size(338, 34);
             this.lblSplit.TabIndex = 34;
             this.lblSplit.Text = "If you have two of the same card, you can split them \r\ninto two hands with two se" +
     "parate full value bets.\r\n";
@@ -450,30 +437,28 @@
             // lblDoubleDown
             // 
             this.lblDoubleDown.AutoSize = true;
-            this.lblDoubleDown.Location = new System.Drawing.Point(19, 496);
-            this.lblDoubleDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDoubleDown.Location = new System.Drawing.Point(25, 610);
             this.lblDoubleDown.Name = "lblDoubleDown";
-            this.lblDoubleDown.Size = new System.Drawing.Size(236, 13);
+            this.lblDoubleDown.Size = new System.Drawing.Size(316, 17);
             this.lblDoubleDown.TabIndex = 35;
             this.lblDoubleDown.Text = "Draw a card, end your turn, and double your bet.";
             // 
             // lblSurrender
             // 
             this.lblSurrender.AutoSize = true;
-            this.lblSurrender.Location = new System.Drawing.Point(595, 496);
-            this.lblSurrender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSurrender.Location = new System.Drawing.Point(793, 610);
             this.lblSurrender.Name = "lblSurrender";
-            this.lblSurrender.Size = new System.Drawing.Size(154, 13);
+            this.lblSurrender.Size = new System.Drawing.Size(206, 17);
             this.lblSurrender.TabIndex = 36;
             this.lblSurrender.Text = "Give up, and lose half your bet.";
             // 
             // btnContinue
             // 
             this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinue.Location = new System.Drawing.Point(21, 336);
-            this.btnContinue.Margin = new System.Windows.Forms.Padding(2);
+            this.btnContinue.Location = new System.Drawing.Point(28, 409);
+            this.btnContinue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(212, 43);
+            this.btnContinue.Size = new System.Drawing.Size(283, 53);
             this.btnContinue.TabIndex = 37;
             this.btnContinue.Text = "Continue";
             this.btnContinue.UseVisualStyleBackColor = true;
@@ -484,10 +469,9 @@
             // 
             this.lblMessages.AutoSize = true;
             this.lblMessages.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessages.Location = new System.Drawing.Point(132, 226);
-            this.lblMessages.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMessages.Location = new System.Drawing.Point(176, 278);
             this.lblMessages.Name = "lblMessages";
-            this.lblMessages.Size = new System.Drawing.Size(286, 26);
+            this.lblMessages.Size = new System.Drawing.Size(369, 32);
             this.lblMessages.TabIndex = 38;
             this.lblMessages.Text = "Lorem ipsum in this hizzizaz";
             this.lblMessages.Visible = false;
@@ -495,10 +479,9 @@
             // lblPlayerCards2
             // 
             this.lblPlayerCards2.AutoSize = true;
-            this.lblPlayerCards2.Location = new System.Drawing.Point(730, 85);
-            this.lblPlayerCards2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayerCards2.Location = new System.Drawing.Point(973, 105);
             this.lblPlayerCards2.Name = "lblPlayerCards2";
-            this.lblPlayerCards2.Size = new System.Drawing.Size(122, 13);
+            this.lblPlayerCards2.Size = new System.Drawing.Size(163, 17);
             this.lblPlayerCards2.TabIndex = 39;
             this.lblPlayerCards2.Text = "Your 2nd Hand\'s Cards: \r\n";
             this.lblPlayerCards2.Visible = false;
@@ -506,10 +489,9 @@
             // lblCom1Bet
             // 
             this.lblCom1Bet.AutoSize = true;
-            this.lblCom1Bet.Location = new System.Drawing.Point(9, 190);
-            this.lblCom1Bet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom1Bet.Location = new System.Drawing.Point(12, 234);
             this.lblCom1Bet.Name = "lblCom1Bet";
-            this.lblCom1Bet.Size = new System.Drawing.Size(63, 13);
+            this.lblCom1Bet.Size = new System.Drawing.Size(83, 17);
             this.lblCom1Bet.TabIndex = 40;
             this.lblCom1Bet.Text = "Com1\'s Bet:";
             this.lblCom1Bet.Visible = false;
@@ -517,10 +499,9 @@
             // lblCom2Bet
             // 
             this.lblCom2Bet.AutoSize = true;
-            this.lblCom2Bet.Location = new System.Drawing.Point(8, 212);
-            this.lblCom2Bet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom2Bet.Location = new System.Drawing.Point(11, 261);
             this.lblCom2Bet.Name = "lblCom2Bet";
-            this.lblCom2Bet.Size = new System.Drawing.Size(63, 13);
+            this.lblCom2Bet.Size = new System.Drawing.Size(83, 17);
             this.lblCom2Bet.TabIndex = 41;
             this.lblCom2Bet.Text = "Com2\'s Bet:";
             this.lblCom2Bet.Visible = false;
@@ -528,10 +509,9 @@
             // lblCom3Bet
             // 
             this.lblCom3Bet.AutoSize = true;
-            this.lblCom3Bet.Location = new System.Drawing.Point(9, 235);
-            this.lblCom3Bet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCom3Bet.Location = new System.Drawing.Point(12, 289);
             this.lblCom3Bet.Name = "lblCom3Bet";
-            this.lblCom3Bet.Size = new System.Drawing.Size(63, 13);
+            this.lblCom3Bet.Size = new System.Drawing.Size(83, 17);
             this.lblCom3Bet.TabIndex = 42;
             this.lblCom3Bet.Text = "Com3\'s Bet:";
             this.lblCom3Bet.Visible = false;
@@ -539,19 +519,57 @@
             // lblPlayerBet
             // 
             this.lblPlayerBet.AutoSize = true;
-            this.lblPlayerBet.Location = new System.Drawing.Point(9, 167);
-            this.lblPlayerBet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayerBet.Location = new System.Drawing.Point(12, 196);
             this.lblPlayerBet.Name = "lblPlayerBet";
-            this.lblPlayerBet.Size = new System.Drawing.Size(51, 13);
+            this.lblPlayerBet.Size = new System.Drawing.Size(67, 17);
             this.lblPlayerBet.TabIndex = 43;
             this.lblPlayerBet.Text = "Your Bet:";
             this.lblPlayerBet.Visible = false;
             // 
+            // btnReplay
+            // 
+            this.btnReplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReplay.Location = new System.Drawing.Point(760, 409);
+            this.btnReplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReplay.Name = "btnReplay";
+            this.btnReplay.Size = new System.Drawing.Size(283, 53);
+            this.btnReplay.TabIndex = 44;
+            this.btnReplay.Text = "Replay";
+            this.btnReplay.UseVisualStyleBackColor = true;
+            this.btnReplay.Visible = false;
+            this.btnReplay.Click += new System.EventHandler(this.btnReplay_Click);
+            // 
+            // lblPlayerBet2
+            // 
+            this.lblPlayerBet2.AutoSize = true;
+            this.lblPlayerBet2.Location = new System.Drawing.Point(12, 213);
+            this.lblPlayerBet2.Name = "lblPlayerBet2";
+            this.lblPlayerBet2.Size = new System.Drawing.Size(95, 17);
+            this.lblPlayerBet2.TabIndex = 45;
+            this.lblPlayerBet2.Text = "Your 2nd Bet:";
+            this.lblPlayerBet2.Visible = false;
+            // 
+            // btnDealerTurn
+            // 
+            this.btnDealerTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDealerTurn.Location = new System.Drawing.Point(403, 409);
+            this.btnDealerTurn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDealerTurn.Name = "btnDealerTurn";
+            this.btnDealerTurn.Size = new System.Drawing.Size(283, 53);
+            this.btnDealerTurn.TabIndex = 46;
+            this.btnDealerTurn.Text = "Dealer Turn";
+            this.btnDealerTurn.UseVisualStyleBackColor = true;
+            this.btnDealerTurn.Visible = false;
+            this.btnDealerTurn.Click += new System.EventHandler(this.btnDealerTurn_Click);
+            // 
             // frmSimplified21
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 575);
+            this.ClientSize = new System.Drawing.Size(1269, 708);
+            this.Controls.Add(this.btnDealerTurn);
+            this.Controls.Add(this.lblPlayerBet2);
+            this.Controls.Add(this.btnReplay);
             this.Controls.Add(this.lblPlayerBet);
             this.Controls.Add(this.lblCom3Bet);
             this.Controls.Add(this.lblCom2Bet);
@@ -590,7 +608,7 @@
             this.Controls.Add(this.lblPlayerTotal);
             this.Controls.Add(this.mnuMenuStrip);
             this.MainMenuStrip = this.mnuMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmSimplified21";
             this.Text = "Simplified 21 by Tisham Islam";
             ((System.ComponentModel.ISupportInitialize)(this.nudPlayerAmount)).EndInit();
@@ -644,6 +662,9 @@
         private System.Windows.Forms.Label lblCom2Bet;
         private System.Windows.Forms.Label lblCom3Bet;
         private System.Windows.Forms.Label lblPlayerBet;
+        private System.Windows.Forms.Button btnReplay;
+        private System.Windows.Forms.Label lblPlayerBet2;
+        private System.Windows.Forms.Button btnDealerTurn;
     }
 }
 
